@@ -29,12 +29,13 @@ class ShoppingCart {
             subtotal += item.price * item.quantity;
         }
 
-        const tax = Math.ceil(subtotal * 0.125 * 100) / 100; // Round up to 2 decimal places
-        const total = Math.ceil((subtotal + tax) * 100) / 100;  // Round up to 2 decimal places
+        // Round up to 2 decimal places
+        const tax = Math.ceil(subtotal * 0.125 * 100) / 100; 
+        const total = Math.ceil((subtotal + tax) * 100) / 100;  
 
 
         this.cartState = {
-            items: [...this.items], // create a copy so that the caller can't modify it directly
+            items: [...this.items],
             subtotal,
             tax,
             total
