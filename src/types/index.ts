@@ -10,3 +10,5 @@ export interface CartState {
     tax: number;
     total: number;
 }
+
+export type ProductName = 'cheerios' | 'cornflakes' | 'frosties';
